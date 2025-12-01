@@ -1,4 +1,3 @@
-```
 import React from 'react';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
@@ -13,7 +12,7 @@ export function CalendarHeader() {
             alert("Tu navegador no soporta notificaciones.");
             return;
         }
-        
+
         Notification.requestPermission().then((permission) => {
             if (permission === "granted") {
                 new Notification("Notificaciones Activadas", {
@@ -31,13 +30,13 @@ export function CalendarHeader() {
                     {format(currentDate, 'MMMM yyyy', { locale: es })}
                 </h2>
                 <div className="flex gap-1">
-                    <button 
+                    <button
                         onClick={prevMonth}
                         className="p-2 hover:bg-white/50 rounded-full transition-all hover:scale-110 active:scale-95 text-gray-700"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
-                    <button 
+                    <button
                         onClick={nextMonth}
                         className="p-2 hover:bg-white/50 rounded-full transition-all hover:scale-110 active:scale-95 text-gray-700"
                     >
@@ -54,7 +53,7 @@ export function CalendarHeader() {
                 >
                     <Bell className="w-5 h-5 group-hover:text-apple-blue transition-colors" />
                 </button>
-                <button 
+                <button
                     onClick={goToToday}
                     className="px-4 py-2 bg-white/80 hover:bg-white text-sm font-semibold text-gray-700 rounded-xl shadow-sm transition-all hover:scale-105 active:scale-95 border border-white/50"
                 >
@@ -64,4 +63,3 @@ export function CalendarHeader() {
         </div>
     );
 }
-```

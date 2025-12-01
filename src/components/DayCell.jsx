@@ -15,29 +15,29 @@ export function DayCell({ date, currentMonth, events = [], onClick }) {
         <div
             onClick={() => onClick(date)}
             className={cn(
-                "h-24 sm:h-32 border-b border-r border-gray-100 p-2 transition-colors cursor-pointer relative group",
-                !isCurrentMonth && "bg-gray-50/50 text-gray-400",
-                isCurrentMonth && "bg-white/40 hover:bg-white/60",
-                isDayToday && "bg-blue-50/30"
+                "min-h-[8rem] sm:min-h-[9rem] border-b border-r border-white/20 p-2 transition-all duration-300 cursor-pointer relative group backdrop-blur-sm",
+                !isCurrentMonth && "bg-gray-50/30 text-gray-400",
+                isCurrentMonth && "bg-white/40 hover:bg-white/60 hover:scale-[1.02] hover:shadow-lg hover:z-10",
+                isDayToday && "bg-blue-50/40 ring-1 ring-blue-400/30"
             )}
         >
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-start mb-1">
                 <span className={cn(
-                    "text-sm font-medium w-7 h-7 flex items-center justify-center rounded-full",
-                    isDayToday ? "bg-apple-blue text-white" : "text-gray-700",
+                    "text-sm font-medium w-7 h-7 flex items-center justify-center rounded-full transition-all",
+                    isDayToday ? "bg-apple-blue text-white shadow-md shadow-blue-500/30" : "text-gray-700 group-hover:bg-white/50",
                     !isCurrentMonth && "text-gray-400"
                 )}>
                     {format(date, 'd')}
                 </span>
             </div>
 
-            <div className="mt-1 space-y-1">
+            <div className="space-y-1 overflow-y-auto max-h-[calc(100%-2rem)] scrollbar-hide">
                 {dayEvents.map((event, idx) => (
                     <div key={idx} className={cn(
-                        "text-xs px-1.5 py-0.5 rounded truncate",
-                        event.type === 'exam' ? "bg-red-100 text-red-700" :
-                            event.type === 'holiday' ? "bg-green-100 text-green-700" :
-                                "bg-blue-100 text-blue-700"
+                        "text-[10px] sm:text-xs px-2 py-1 rounded-md truncate transition-all border shadow-sm",
+                        event.type === 'exam' ? "bg-red-100/90 text-red-800 border-red-200 hover:bg-red-200" :
+                            event.type === 'holiday' ? "bg-emerald-100/90 text-emerald-800 border-emerald-200 hover:bg-emerald-200" :
+                                "bg-blue-100/90 text-blue-800 border-blue-200 hover:bg-blue-200"
                     )}>
                         {event.title}
                     </div>

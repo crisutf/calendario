@@ -17,6 +17,12 @@ La web es rápida, ligera y fácil de actualizar.
 
 ---
 
+## ⚠ Problema detectado ⚠
+
+Este calendario al poner muchos eventos en el JSON da problemas en telefonos y da problemas de rendimiento re recomienda eliminar los eventos ya pasados 
+
+---
+
 ## ✏️ Cómo añadir o editar eventos
 
 Los eventos están almacenados en el archivo:

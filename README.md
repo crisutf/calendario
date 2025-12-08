@@ -5,7 +5,8 @@ Este proyecto es un **calendario escolar** diseñado para informar a los alumnos
 ## 🌐 URLs del proyecto
 
 - Página principal: **[https://crisu.qzz.io/](https://crisu.qzz.io/)**
-- Alternativa/hosting: **[https://calendario-escolar.pages.dev](https://calendario-escolar.pages.dev)**
+- Alternativa si la primera se cae: **[https://crisutf.qzz.io/](https://crisutf.qzz.io/)**
+- Alternativa 2 si la LaLiga (Mafia) bloquea la IP de Cloudflare de las 2 primeras webs: **[https://calendario-escolar.pages.dev](https://calendario-escolar.pages.dev)**
 
 ## 🛠️ Tecnologías utilizadas
 

@@ -8,7 +8,7 @@ Este proyecto es un **calendario escolar** diseñado para informar a los alumnos
 - Alternativa si la primera se cae: **[https://crisutf.qzz.io/](https://crisutf.qzz.io/)**
 - Alternativa 2 si la LaLiga (Mafia) bloquea la IP de Cloudflare de las 2 primeras webs: **[https://calendario-escolar.pages.dev](https://calendario-escolar.pages.dev)**
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas 🛠️
 
 - **Vite**
 - **React**
@@ -25,12 +25,12 @@ La web es rápida, ligera y fácil de actualizar.
 
 ---
 
-## ¿Como arreglar los datos de la app?
+## 🛠️ ¿Como arreglar los datos de la app? 🛠️
 Para que se vean los cambios de esta version arreglada el 11/12/2025 se recomeinda borrar los datos de la web asi: enntas a configuracion de tu navegador y pinchas en *Configuración del sitio* --> *Ver permisos y datos almacenados en todos los sitios* --> eliminar datos de las 3 URL de la APP y ya esta
 
 ---
 
-## ✏️ Cómo añadir o editar eventos
+## ✏️ Cómo añadir o editar eventos ✏️
 
 Los eventos están almacenados en el archivo:
 
@@ -53,7 +53,8 @@ Cada evento debe seguir esta estructura:
   - `exam` → Rojo. Para exámenes.
   - `holiday` → Verde. Para festivos como Navidad, Semana Santa, etc.
 
-### 📌 Ejemplo
+### 📌 Ejemplo 
+> (Ahora se tiene que poner el JSON en otro server para que funcione)
 
 ```json
 {"date": "2025-02-14", "title": "Examen de Matemáticas", "type": "exam"}

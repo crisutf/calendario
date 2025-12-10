@@ -49,8 +49,8 @@ Para que se vean correctamente los cambios de la versión del **11/12/2025**, es
    - `crisutf.qzz.io`
    - `calendario-escolar.pages.dev`
 4. Elimina los datos de cada una.  
-5. Recarga la webPara que se vean correctamente los cambios de la versión del **11/12/2025**, es necesario borrar los datos guardados de la web.  
-> **Tranquilo:** esto **solo hace falta una vez**. Es porque la app cambió de URL; mientras no vuelva a cambiar de dominio, no tendrás que repetir este proceso.
+5. Recarga la web.
+6. Y ya esta
 
 ---
 

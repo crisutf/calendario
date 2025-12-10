@@ -20,7 +20,13 @@ La web es rápida, ligera y fácil de actualizar.
 
 ## ⚠ Problema detectado ⚠
 
-Este calendario al poner muchos eventos en el JSON da problemas en telefonos y da problemas de rendimiento re recomienda eliminar los eventos ya pasados 
+- Este calendario al poner muchos eventos en el JSON da problemas en telefonos y da problemas de rendimiento re recomienda eliminar los eventos ya pasados
+- Al tener el JSON en el codigo se quedaba en la cache haciendo que los usuarios no puedieran ver los eventos nuevos
+
+---
+
+## ¿Como arreglar los datos de la app?
+Para que se vean los cambios de esta version arreglada el 11/12/2025 se recomeinda borrar los datos de la web asi: enntas a configuracion de tu navegador y pinchas en *Configuración del sitio* --> *Ver permisos y datos almacenados en todos los sitios* --> eliminar datos de las 3 URL de la APP y ya esta
 
 ---
 

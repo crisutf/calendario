@@ -33,6 +33,7 @@ Para que se vean los cambios de esta version arreglada el 11/12/2025 se recomein
 ## ✏️ Cómo añadir o editar eventos ✏️
 
 Los eventos están almacenados en el archivo:
+> donde tu quieras o puede que en
 
 ```
 src/data/events.json
@@ -54,7 +55,7 @@ Cada evento debe seguir esta estructura:
   - `holiday` → Verde. Para festivos como Navidad, Semana Santa, etc.
 
 ### 📌 Ejemplo 
-> (Ahora se tiene que poner el JSON en otro server para que funcione)
+> Ahora se tiene que poner el JSON en otro server para que funcione
 
 ```json
 {"date": "2025-02-14", "title": "Examen de Matemáticas", "type": "exam"}

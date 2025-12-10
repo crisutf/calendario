@@ -26,7 +26,31 @@ La web es rápida, ligera y fácil de actualizar.
 ---
 
 ## 🛠️ ¿Como arreglar los datos de la app? 🛠️
-Para que se vean los cambios de esta version arreglada el 11/12/2025 se recomeinda borrar los datos de la web asi: enntas a configuracion de tu navegador y pinchas en *Configuración del sitio* --> *Ver permisos y datos almacenados en todos los sitios* --> eliminar datos de las 3 URL de la APP y ya esta
+Para que se vean correctamente los cambios de la versión del **11/12/2025**, es necesario borrar los datos guardados de la web.  
+> **Tranquilo:** esto **solo hace falta una vez**. Es porque la app cambió de URL; mientras no vuelva a cambiar de dominio, no tendrás que repetir este proceso.
+
+#### 🔹 Google Chrome
+1. Abre **Configuración**.  
+2. Entra en **Privacidad y seguridad**.  
+3. Ve a **Configuración del sitio**.  
+4. Pulsa **Ver permisos y datos almacenados en todos los sitios**.  
+5. Busca estas 3 URL:
+   - `crisu.qzz.io`
+   - `crisutf.qzz.io`
+   - `calendario-escolar.pages.dev`
+6. Pulsa **Eliminar datos** en cada una.  
+7. Recarga la página.
+
+#### 🔹 Safari (iPhone, iPad o Mac)
+1. Abre **Ajustes** (iOS) o **Safari → Preferencias** (Mac).  
+2. Ve a **Avanzado → Datos de sitios web**.  
+3. Busca estas 3 URL:
+   - `crisu.qzz.io`
+   - `crisutf.qzz.io`
+   - `calendario-escolar.pages.dev`
+4. Elimina los datos de cada una.  
+5. Recarga la webPara que se vean correctamente los cambios de la versión del **11/12/2025**, es necesario borrar los datos guardados de la web.  
+> **Tranquilo:** esto **solo hace falta una vez**. Es porque la app cambió de URL; mientras no vuelva a cambiar de dominio, no tendrás que repetir este proceso.
 
 ---
 

@@ -27,42 +27,48 @@ export function Calendar() {
     const days = eachDayOfInterval({ start: startDate, end: endDate });
     const weekDays = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
 
-    const handleDayClick = (date) => {
+    const handleDayClick = React.useCallback((date) => {
         setSelectedDate(date);
         setIsModalOpen(true);
-    };
+    }, []);
 
-    // Dynamic Theme Classes
-    const themeClasses = {
-        calm: 'bg-theme-calm-bg/80 border-theme-calm-accent/30',
-        stress: 'bg-theme-stress-bg/90 border-theme-stress-accent/50 shadow-red-500/20',
-        aggressive: 'bg-theme-aggressive-bg/90 border-theme-aggressive-accent/50',
-        holiday: 'bg-theme-holiday-bg/90 border-theme-holiday-accent/50',
-    };
+    const handleCloseModal = React.useCallback(() => {
+        setIsModalOpen(false);
+    }, []);
 
-    const headerClasses = {
-        calm: 'bg-white/30 text-gray-500',
-        stress: 'bg-red-500/10 text-red-700 font-bold',
-        aggressive: 'bg-orange-500/10 text-orange-700',
-        holiday: 'bg-emerald-500/10 text-emerald-700',
+    // Dynamic Theme Classes with smoother transitions
+    const themeEffects = {
+        calm: 'shadow-blue-500/5 border-blue-100/50',
+        stress: 'shadow-red-500/10 border-red-100/50',
+        aggressive: 'shadow-orange-500/10 border-orange-100/50',
+        holiday: 'shadow-emerald-500/10 border-emerald-100/50',
     };
 
     return (
-        <div className={`w-full max-w-5xl mx-auto p-4 transition-colors duration-500`}>
-            <div className={`glass rounded-3xl shadow-xl overflow-hidden border transition-all duration-500 ${themeClasses[theme] || themeClasses.calm}`}>
+        <div className="w-full max-w-6xl mx-auto p-4 sm:p-8 transition-all duration-700 ease-in-out">
+            <div className={`
+                glass rounded-[2.5rem] overflow-hidden transition-all duration-700 relative z-10
+                ${themeEffects[theme] || themeEffects.calm}
+                dark:bg-slate-800/40 dark:border-white/10
+                animate-fade-in
+            `}>
                 <CalendarHeader />
 
                 {/* Weekday headers */}
-                <div className={`grid grid-cols-7 border-b border-gray-100 transition-colors duration-300 ${headerClasses[theme] || headerClasses.calm}`}>
-                    {weekDays.map(day => (
-                        <div key={day} className="py-2 text-center text-xs font-semibold uppercase tracking-wider">
+                <div className="grid grid-cols-7 border-b border-gray-100/50 dark:border-white/10 bg-white/20 dark:bg-slate-900/40 backdrop-blur-sm">
+                    {weekDays.map((day, i) => (
+                        <div
+                            key={day}
+                            className="py-4 text-center text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest animate-slide-in"
+                            style={{ animationDelay: `${i * 0.05}s` }}
+                        >
                             {day}
                         </div>
                     ))}
                 </div>
 
                 {/* Calendar Grid */}
-                <div className="grid grid-cols-7 bg-white/40 backdrop-blur-sm">
+                <div className="grid grid-cols-7 bg-white/30">
                     {days.map((day, idx) => {
                         const dateKey = format(day, 'yyyy-MM-dd');
                         return (
@@ -80,10 +86,14 @@ export function Calendar() {
 
             <EventModal
                 isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
+                onClose={handleCloseModal}
                 date={selectedDate}
                 events={events}
             />
+
+            {/* Background decoration */}
+            <div className="fixed top-20 left-20 w-96 h-96 bg-purple-200/30 rounded-full blur-[100px] -z-10 animate-float" />
+            <div className="fixed bottom-20 right-20 w-96 h-96 bg-blue-200/30 rounded-full blur-[100px] -z-10 animate-float" style={{ animationDelay: '2s' }} />
         </div>
     );
 }
